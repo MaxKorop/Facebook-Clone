@@ -3,8 +3,7 @@ import hideIcon from '../../../assets/hide.png';
 import visibleIcon from '../../../assets/visible.png';
 import './Input.css';
 
-const InputField = ({ isPassword, setValue }) => {
-    const [showToggle, setShowToggle] = useState(false);
+const InputField = ({ isPassword, setValue, value }) => {
     const [hide, setHide] = useState(true);
     const passwordRef = useRef();
 
@@ -28,9 +27,9 @@ const InputField = ({ isPassword, setValue }) => {
         <div>
             {isPassword ?
                 (<div style={{position: "relative"}}>
-                    <input ref={passwordRef} type="password" placeholder='Пароль' onChange={onChange} className='input-field' onFocus={() => setShowToggle(true)} onBlur={() => setShowToggle(false)} />
-                    {showToggle && hide && <img style={{position: "absolute", transform: "translate(-50px, 15px)", width: 30, height: 30, cursor: "pointer", zIndex: 9}} onMouseDown={() => showPassword()} src={hideIcon} alt="" />}
-                    {showToggle && !hide && <img style={{position: "absolute", transform: "translate(-50px, 15px)", width: 30, height: 30, cursor: "pointer", zIndex: 9}} onMouseDown={() => hidePassword()} src={visibleIcon} alt="" />}
+                    <input ref={passwordRef} type="password" placeholder='Пароль' onChange={onChange} className='input-field' />
+                    {value && hide && <img style={{position: "absolute", transform: "translate(-50px, 15px)", width: 30, height: 30, cursor: "pointer", zIndex: 9}} onMouseDown={() => showPassword()} src={hideIcon} alt="" />}
+                    {value && !hide && <img style={{position: "absolute", transform: "translate(-50px, 15px)", width: 30, height: 30, cursor: "pointer", zIndex: 9}} onMouseDown={() => hidePassword()} src={visibleIcon} alt="" />}
                 </div>)
                 :
                 (<input type="text" placeholder='Електронна адреса або номер телефону' onChange={onChange} className='input-field' />)}

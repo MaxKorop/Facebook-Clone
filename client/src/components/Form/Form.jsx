@@ -17,7 +17,7 @@ const Form = () => {
         <div className='form-wrapper'>
             <div className='form-container'>
                 <InputField setValue={setLogin} />
-                <InputField isPassword={true} setValue={setPassword} />
+                <InputField isPassword={true} setValue={setPassword} value={password} />
                 <LogInButton onSubmit={onSubmit} />
                 <a href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0">Забули пароль?</a>
                 <hr style={{width: "90%", border: "1px solid #ccc", margin: "20px 16px"}}/>
