@@ -1,0 +1,31 @@
+.thanks-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Freight Sans Semibold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.thanks-wrapper > img {
+    width: 320px;
+    height: 400px;
+    margin-top: auto;
+}
+
+.thank {
+    width: 300px;
+    color: #3b5998;
+    font-size: 28px;
+    line-height: 30px;
+    word-spacing: -1px;
+    margin-top: 5px;
+}
+
+.hope {
+    width: 300px;
+    color: #1d2129;
+    font-size: 20px;
+    line-height: 26px;
+    word-spacing: -1px;
+    margin-top: 10px;
+}

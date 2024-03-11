@@ -1,0 +1,42 @@
+.button {
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 48px;
+    padding: 0 16px;
+    transition: 200ms cubic-bezier(.08,.52,.52,1) background-color, 200ms cubic-bezier(.08,.52,.52,1) box-shadow, 200ms cubic-bezier(.08,.52,.52,1) transform;
+    color: white;
+    text-align: center;
+    text-shadow: none;
+    vertical-align: middle;
+    cursor: pointer;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.login {
+    font-weight: bold;
+    background-color: #0866ff;
+    width: 350px;
+}
+
+.register {
+    background-color: #42b72a;
+    font-size: 17px;
+}
+
+.login:before {
+    content: '';
+    display: inline-block;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.login:hover {
+    background-color: #1b71fa;
+}
+
+.register:hover {
+    background-color: #399f25;
+}
